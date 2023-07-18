@@ -1,0 +1,84 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "DF-Azure-Dev-Rohit"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
+		"AzureBlobStorage2_properties_typeProperties_connectionString_secretName": {
+			"type": "string",
+			"defaultValue": "Secret-demo-key-vault"
+		},
+		"AzureBlobStorage3_properties_typeProperties_connectionString_secretName": {
+			"type": "string",
+			"defaultValue": "Secret-demo-key-vault"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://Key-demo-adf-dev.vault.azure.net/"
+		},
+		"AzureKeyVault2_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://Key-demo-adf-dev.vault.azure.net/"
+		},
+		"SharedIR_properties_typeProperties_linkedInfo_resourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/a53a50b4-3fe7-4251-b96a-8cc7e3a2b5d3/resourcegroups/FreeDemo/providers/Microsoft.DataFactory/factories/freedemo03/integrationruntimes/Demointegration-selfHosted"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "DF-Azure-Dev-Rohit_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"AzureKeyVault1_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
+					},
+					"AzureKeyVault2_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault2_properties_typeProperties_baseUrl')]"
+					},
+					"SharedIR_properties_typeProperties_linkedInfo_resourceId": {
+						"value": "[parameters('SharedIR_properties_typeProperties_linkedInfo_resourceId')]"
+					},
+					"AzureBlobStorage2_properties_typeProperties_connectionString_secretName": {
+						"value": "[parameters('AzureBlobStorage2_properties_typeProperties_connectionString_secretName')]"
+					},
+					"AzureBlobStorage3_properties_typeProperties_connectionString_secretName": {
+						"value": "[parameters('AzureBlobStorage3_properties_typeProperties_connectionString_secretName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

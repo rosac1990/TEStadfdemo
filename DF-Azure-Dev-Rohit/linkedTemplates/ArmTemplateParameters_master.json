@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "DF-Azure-Dev-Rohit"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage2_properties_typeProperties_connectionString_secretName": {
+			"value": "Secret-demo-key-vault"
+		},
+		"AzureBlobStorage3_properties_typeProperties_connectionString_secretName": {
+			"value": "Secret-demo-key-vault"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://Key-demo-adf-dev.vault.azure.net/"
+		},
+		"AzureKeyVault2_properties_typeProperties_baseUrl": {
+			"value": "https://Key-demo-adf-dev.vault.azure.net/"
+		},
+		"SharedIR_properties_typeProperties_linkedInfo_resourceId": {
+			"value": "/subscriptions/a53a50b4-3fe7-4251-b96a-8cc7e3a2b5d3/resourcegroups/FreeDemo/providers/Microsoft.DataFactory/factories/freedemo03/integrationruntimes/Demointegration-selfHosted"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
