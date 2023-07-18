@@ -1,0 +1,9 @@
+{
+	"name": "DF-Azure-Dev-Rohit",
+	"location": "centralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b723ac62-415b-42ae-bdd7-9cf54b14ebe3",
+		"tenantId": "189de737-c93a-4f5a-8b68-6f4ca9941912"
+	}
+}
