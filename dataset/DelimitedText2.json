@@ -1,5 +1,5 @@
 {
-	"name": "DelimitedText1",
+	"name": "DelimitedText2",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorage2",
@@ -10,8 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "employee_data.csv",
-				"container": "democontainers"
+				"container": "democopy"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
@@ -20,19 +19,35 @@
 		},
 		"schema": [
 			{
-				"name": "Name",
+				"name": "Year of Release",
 				"type": "String"
 			},
 			{
-				"name": "Category",
+				"name": "National Sales",
 				"type": "String"
 			},
 			{
-				"name": "Status",
+				"name": "EU Sales",
 				"type": "String"
 			},
 			{
-				"name": "Error",
+				"name": "JP Sales",
+				"type": "String"
+			},
+			{
+				"name": "Other Sales",
+				"type": "String"
+			},
+			{
+				"name": "Global Sales",
+				"type": "String"
+			},
+			{
+				"name": "Total Sales",
+				"type": "String"
+			},
+			{
+				"name": "Sales Pct Change",
 				"type": "String"
 			}
 		]
