@@ -1,0 +1,12 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "FreedemoselfhostingIR"
+		},
+		"SharedIR_properties_typeProperties_linkedInfo_resourceId": {
+			"value": "/subscriptions/a53a50b4-3fe7-4251-b96a-8cc7e3a2b5d3/resourcegroups/FreeDemo/providers/Microsoft.DataFactory/factories/freedemo03/integrationruntimes/Demointegration-selfHosted"
+		}
+	}
+}
