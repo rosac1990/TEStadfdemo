@@ -1,0 +1,9 @@
+{
+	"name": "FreedemoselfhostingIR",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "fe24aca4-dbe7-49f3-9958-60ece1a71712",
+		"tenantId": "189de737-c93a-4f5a-8b68-6f4ca9941912"
+	}
+}
