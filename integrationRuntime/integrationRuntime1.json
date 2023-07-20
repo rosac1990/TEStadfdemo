@@ -1,0 +1,12 @@
+{
+	"name": "integrationRuntime1",
+	"properties": {
+		"type": "SelfHosted",
+		"typeProperties": {
+			"linkedInfo": {
+				"resourceId": "/subscriptions/a53a50b4-3fe7-4251-b96a-8cc7e3a2b5d3/resourcegroups/FreeDemo/providers/Microsoft.DataFactory/factories/freedemo03/integrationruntimes/Demointegration-selfHosted",
+				"authorizationType": "Rbac"
+			}
+		}
+	}
+}
